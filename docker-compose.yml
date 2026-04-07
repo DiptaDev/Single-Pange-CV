@@ -1,0 +1,11 @@
+# compose.yaml
+services:
+
+  web_server:
+    image: nginx:mainline-alpine3.23-slim
+    container_name: nginx_single_pange_CV
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/usr/share/nginx/html:rw
+    restart: unless-stopped
